@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+*::selection {
+    background: var(--green);
+    color:orange;
+}
+:root{
+    --black:#363738;
+    --green:#0B7572;
+    --p-color:#6B6B6C;
+    --line-color:#FFCE50;
+}
+body{
+    max-width: 1536px;
+}
+p{
+    color: var(--p-color);
+}
+.container{
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@import "../fonts/fonts.css";
+@import "_intro";
+@import "_works-type";
+@import "_services";
+@import "_Completed-works";
+@import "_advantages";
+@import "_delivery-stages";
+@import "_partners";
+@import "_staff";
+@import "_video";

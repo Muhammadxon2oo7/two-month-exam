@@ -1,0 +1,239 @@
+.completed-works{
+    margin-top: 122px;
+    .container{
+        .completed-works__title{
+            margin-bottom: 56px;
+            h3{
+                max-width: 687px;
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 48px;
+                line-height:60px;
+                color:var(--black);
+                margin-bottom: 30px;
+            }
+            p{
+                max-width: 667px;
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height:24px;
+            }
+        }
+        .complated-works__cards{
+            width: 100%;
+            display: flex;
+            .complated-works__cards__card{
+                max-width: 393px;
+                height: 439px;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+                border-radius: 10px;
+                background-color:#FFFFFF;
+                overflow: hidden;
+                margin-right: 30px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                .img_wrapper{
+                    margin-bottom: 24px;
+                    img{
+                        width: 393px;
+                        height: 247px;
+                    }
+                }
+                .card_content{
+                    padding-left: 32px;
+                    padding-right: 10px;
+                    h3{
+                        max-width: 327px;
+                        font-family: 'Exo 2';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height:27px;
+                        margin-bottom: 16px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    p{
+                        max-width: 291px;
+                        font-family: 'PT Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height:24px;
+                        margin-bottom: 32px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    strong{
+                        font-family: 'Exo 2';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height:22px;
+                        color: var(--black);
+                        position: relative;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            background-color: var(--line-color);
+                            bottom: -10px;
+                            transform: scaleX(0);
+                            transition: .5s;
+                            left: 0;
+                        }
+    
+                        &:hover::before {
+                            position: absolute;
+                            left: 0;
+                            transition: .5s;
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+            .karucel{
+                display: none;
+            }
+        }
+    }
+}
+//tablet media start
+@media only screen and (max-width:1075px){
+    .completed-works{
+        margin-top: 100px;
+        .container{
+            padding-left: 39px;
+            padding-right: 39px;
+            .completed-works__title{
+                h3{
+                    max-width: 687px;
+                    font-size: 44px;
+                    line-height:55px;
+                    margin-bottom: 32px;
+                }
+            }
+            .complated-works__cards{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 996px;
+                .complated-works__cards__card{
+                    max-width:996px;
+                    width: 100%;
+                    padding-right: 0;
+                    margin-right: 0;
+                    margin-bottom: 32px;
+                    .img_wrapper{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .card_content{
+                        width: 100%;
+                        padding-right: 32px;
+                        // h3{
+                            
+                        // }
+                        p{
+                            max-width: 510px;
+                            width: 100%;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//mobile media start
+@media only screen and (max-width:420px){
+    .completed-works{
+        .container{
+            padding-left: 15px;
+            padding-right: 15px;
+            .completed-works__title{
+                margin-bottom: 32px;
+                h3{
+                    font-size: 28px;
+                    line-height: 35px;
+                    margin-bottom: 24px;
+                }
+                p{
+                    font-size: 15px;
+                    line-height:22px;
+                }
+            }
+            .complated-works__cards{
+                display: inline-block;
+                .complated-works__cards__card{
+                    .img_wrapper{
+                        margin-bottom: 24px;
+                    }
+                    .card_content{
+                        padding-left: 24px;
+                        margin-right: 24px;
+                        h3{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 15px;
+                            max-width: 291px;
+                        }
+                    }
+                    &:nth-child(2),&:nth-child(3) {
+                        display: none;
+                    }
+                    
+                    
+                }
+                
+                .karucel{
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .circle{
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 28px;
+                        height: 28px;
+                        .circle-bg{
+                            width: 12px;
+                            height: 12px;
+                            display: block;
+                            border-radius: 50%;
+                            background-color: #E9E9EC;
+                        }
+                    }
+                    .input{
+                        display: none;
+                        visibility: hidden;
+                    }
+                    .input:checked+.circle{
+                        border: 1px solid var(--green);
+                        border-radius:50%;
+                    }
+                    .input:checked+.circle>.circle-bg{
+                        background-color:var(--green);
+                    }
+                }
+                
+            }
+        }
+    }
+}

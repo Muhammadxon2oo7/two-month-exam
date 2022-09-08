@@ -1,0 +1,168 @@
+.delivery-stages{
+    .container{
+        padding-top: 120px;
+        .delivery-stages__title{
+            margin-bottom: 48px;
+            h3{
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 60px;
+            }
+        }
+        .delievery-stages__cards{
+            width: 100%;
+            padding-left: 49px;
+            .card{
+                max-width: 1183px;
+                width: 100%;
+                height: 245px;
+                display: flex;
+                padding-left: 96px;
+                align-items: center;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+                margin-bottom: 24px;
+                padding-right: 10px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:hover{
+                    transition: .7;
+                    border-left: 8px double var(--green);
+                    cursor: pointer;
+                }
+                img{
+                    width: 331px;
+                    height: 181px;
+                    border-radius: 4px;
+                    margin-right: 56px;
+                }
+                .card__content{
+                    h3{
+                        max-width: 258px;
+                        font-family: 'Exo 2';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height:25px;
+                        margin-bottom: 48px;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -24px;
+                            width: 86px;
+                            height: 3px;
+                            background-color: var(--line-color);
+                        }
+                    }
+                    p{
+                        max-width: 568px;
+                        font-family: 'PT Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        &:last-child{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1102px){
+    .delivery-stages{
+        .container{
+            padding-left: 39px;
+            padding-right: 39px;
+            .delivery-stages__title{
+                h3{
+                    font-family: Exo 2;
+                    font-size: 44px;
+                    line-height: 55px;
+                    
+                }
+            }
+            .delievery-stages__cards{
+                padding-left: 49px;
+                .card{
+                    padding-left: 79px;
+                    padding-right: 70px;
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:630px){
+    .delivery-stages{
+        .container{
+            padding-left: 16px;
+            padding-right: 15px;
+            padding-top: 64px;
+            .delivery-stages__title{
+                margin-bottom: 30px;
+                h3{
+                    font-size: 28px;
+                    line-height: 35px;
+                }
+            }
+            .delievery-stages__cards{
+                padding-left: 32px;
+                .card{
+                    height: 176px;
+                    display: block;
+                    padding-left: 43px;
+                    padding-right: 22px;
+                    .card__content{
+                        display: block;
+                        height: auto;
+                        padding-top: 24px;
+                        h3{
+                            font-size: 18px;
+                            line-height:22px;
+                            margin-bottom: 16px;
+                            &::after{
+                                display: none;
+                            }
+                        }
+                        p{
+                            
+                            display: none;
+                            &:last-child{
+                                display: block;
+                                font-size: 15px;
+                                line-height:22px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:350px){
+    .delivery-stages{
+        .container{
+            .delievery-stages__cards{
+                .card{
+                    .card__content{
+                        p{
+                            &:last-child{
+                                font-size:10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

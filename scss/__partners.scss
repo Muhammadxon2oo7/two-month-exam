@@ -1,0 +1,206 @@
+.partners{
+    .container{
+        padding-top: 120px;
+        // padding-left: 100px;
+        // padding-right: 100px;
+        .partners__title{
+            margin-bottom: 90px;
+            h3{
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 60px;
+                color: var(--black);
+            }
+        }
+        .partners_list{
+            max-width:100%;
+            display: grid;
+            grid-template-columns: repeat(4,317px);
+            grid-template-rows: 185px 185px;
+            grid-row-gap: 71px;
+            
+            //border: 1px solid;
+            .card{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                border-right: 1px solid #D7D7DD;
+                &:nth-child(4),&:nth-child(8){
+                    border: none;
+                }
+                .img_wrapper{
+                    height: 72px;
+                    max-width: 200px;
+                    width: 100%;
+                    display: flex;
+                    justify-content:flex-end;
+                    margin-bottom: 50px;
+                    margin-right: 40px;
+                    img{
+                        width: 80%;
+                        height: 100%;
+                    }
+                }
+                .card__content{
+                    h4{
+                        font-family: 'Exo 2';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 27px;
+                        text-align: center;
+                        margin-bottom: 5px;   
+                    }
+                    p{
+                        font-family: 'PT Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 25px;
+                        text-align: center;
+                    }
+                }
+            }
+            
+        }
+        .karucel{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width:1400px){
+    .partners{
+        .container{
+            .partners_list{
+                grid-template-columns: repeat(3, 317px);
+                .card{
+                    &:nth-child(4){
+                        border-right: 1px solid #D7D7DD;
+                    }
+                    &:nth-child(3),&:nth-child(6){
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1055px){
+    .partners{
+        .container{
+            padding-right: 42px;
+            padding-left: 39px;
+            padding-top: 88px;
+            .partners__title{
+                margin-bottom: 64px;
+                h3{
+                    font-size: 44px;
+                    line-height: 55px;
+                    letter-spacing: 0em;
+                }
+            }
+            .partners_list{
+                grid-template-columns: repeat(2,  343.5px);
+                grid-template-rows: repeat(4,185px);
+                grid-row-gap: 65px;
+                .card{
+                    &:nth-child(3){
+                        border-right: 1px solid #D7D7DD;
+                    }
+                    &:nth-child(2),&:nth-child(4){
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:725px){
+    .partners{
+        .container{
+            padding-top: 64px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .partners__title{
+                margin-bottom: 56px;
+                h3{
+                    font-size: 28px;
+                    line-height: 35px;
+                }
+            }
+            .partners_list{
+                height: auto;
+                grid-template-columns: repeat(2,50%);
+                grid-template-rows: repeat(2,185px);
+                margin-bottom: 40px;
+                .card{
+                    .img_wrapper{
+                        height: 57px;
+                        width: 118px;
+                        margin-bottom: 49px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            
+                        }
+                    }
+                    &{
+                        grid-template-rows: repeat(2,176px);
+                        .img_wrapper{
+                            margin-bottom: 24px;
+
+                        }
+                    }
+                    &:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8){
+                        display: none;
+                    }
+                }
+            }
+            .karucel{
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .circle{
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 28px;
+                        height: 28px;
+                        .circle-bg{
+                            width: 12px;
+                            height: 12px;
+                            display: block;
+                            border-radius: 50%;
+                            background-color: #E9E9EC;
+                        }
+                    }
+                    .input{
+                        display: none;
+                        visibility: hidden;
+                    }
+                    .input:checked+.circle{
+                        border: 1px solid var(--green);
+                        border-radius:50%;
+                    }
+                    .input:checked+.circle>.circle-bg{
+                        background-color:var(--green);
+                    }
+                }
+        }
+    }
+}
+// @media only screen and (max-width:701px){
+//     .partners{
+//         .container{
+//             .partners_list{
+//                 grid-template-columns: repeat(2, 172.5px);
+
+//             }
+//         }
+//     }
+// }
